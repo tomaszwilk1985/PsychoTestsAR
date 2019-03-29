@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FDE98B72243F34D004D72F9 /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDE98B62243F34D004D72F9 /* ARController.swift */; };
 		0FE64B2122402EC300A376DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE64B2022402EC300A376DF /* AppDelegate.swift */; };
 		0FE64B2322402EC300A376DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE64B2222402EC300A376DF /* ViewController.swift */; };
 		0FE64B2622402EC300A376DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE64B2422402EC300A376DF /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		0FE64B2E22402EC400A376DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE64B2C22402EC400A376DF /* LaunchScreen.storyboard */; };
 		0FE64B3922402EC500A376DF /* PsychoTestsARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE64B3822402EC500A376DF /* PsychoTestsARTests.swift */; };
 		0FE64B4422402EC500A376DF /* PsychoTestsARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE64B4322402EC500A376DF /* PsychoTestsARUITests.swift */; };
+		0FFC2F3122441AEA0067D159 /* hand_ml.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC2F3022441AEA0067D159 /* hand_ml.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FDE98B62243F34D004D72F9 /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		0FE64B1D22402EC300A376DF /* PsychoTestsAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychoTestsAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE64B2022402EC300A376DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FE64B2222402EC300A376DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		0FE64B3F22402EC500A376DF /* PsychoTestsARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsychoTestsARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE64B4322402EC500A376DF /* PsychoTestsARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychoTestsARUITests.swift; sourceTree = "<group>"; };
 		0FE64B4522402EC500A376DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FFC2F3022441AEA0067D159 /* hand_ml.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = hand_ml.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,12 @@
 				0FE64B2022402EC300A376DF /* AppDelegate.swift */,
 				0FE64B2222402EC300A376DF /* ViewController.swift */,
 				0FE64B2422402EC300A376DF /* Main.storyboard */,
+				0FDE98B62243F34D004D72F9 /* ARController.swift */,
 				0FE64B2A22402EC400A376DF /* Assets.xcassets */,
 				0FE64B2C22402EC400A376DF /* LaunchScreen.storyboard */,
 				0FE64B2F22402EC400A376DF /* Info.plist */,
 				0FE64B2722402EC300A376DF /* PsychoTestsAR.xcdatamodeld */,
+				0FFC2F3022441AEA0067D159 /* hand_ml.mlmodel */,
 			);
 			path = PsychoTestsAR;
 			sourceTree = "<group>";
@@ -208,7 +214,7 @@
 				};
 			};
 			buildConfigurationList = 0FE64B1822402EC300A376DF /* Build configuration list for PBXProject "PsychoTestsAR" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDE98B72243F34D004D72F9 /* ARController.swift in Sources */,
 				0FE64B2922402EC300A376DF /* PsychoTestsAR.xcdatamodeld in Sources */,
+				0FFC2F3122441AEA0067D159 /* hand_ml.mlmodel in Sources */,
 				0FE64B2322402EC300A376DF /* ViewController.swift in Sources */,
 				0FE64B2122402EC300A376DF /* AppDelegate.swift in Sources */,
 			);
@@ -436,15 +444,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AYV8L43UCQ;
 				INFOPLIST_FILE = PsychoTestsAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PUM.PsychoTestsAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,15 +465,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AYV8L43UCQ;
 				INFOPLIST_FILE = PsychoTestsAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PUM.PsychoTestsAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
