@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartController.swift
 //  PsychoTestsAR
 //
 //  Created by AT Wolfar on 18/03/2019.
@@ -8,11 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartController: UIViewController {
 
-    
-    @IBOutlet weak var btnRunAR: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,47 +10,363 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="StartController" customModule="PsychoTestsAR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCM-vN-qSx">
-                                <rect key="frame" x="305" y="172" width="53" height="30"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="t1m-0f-poa" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="80" y="440" width="214" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Test AR"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-WM-B5Z">
+                                <rect key="frame" x="311" y="609" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dalej"/>
                                 <connections>
-                                    <segue destination="MMN-ip-KgG" kind="show" id="qDQ-f9-gc2"/>
+                                    <segue destination="DDI-DY-wTG" kind="show" id="esc-6X-0YP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Screen - kontrolka Page Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wc9-7g-dwH">
+                                <rect key="frame" x="44" y="253" width="286" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="btnRunAR" destination="gCM-vN-qSx" id="Aaz-YQ-N4B"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="-967"/>
+            <point key="canvasLocation" x="-932" y="-950"/>
+        </scene>
+        <!--Main Menu Controller-->
+        <scene sceneID="d6a-kb-wyF">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjm-Bs-1kB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="PcH-9o-guV" customClass="MainMenuController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ix-08-u9N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main Menu Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4M-cS-tXX">
+                                <rect key="frame" x="102" y="242" width="164" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FR-QQ-73M">
+                                <rect key="frame" x="26" y="421" width="316" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Testy psychologiczne"/>
+                                <connections>
+                                    <segue destination="JRe-1r-YyC" kind="show" id="fq9-KH-1S7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDq-Ev-SqV">
+                                <rect key="frame" x="26" y="508" width="316" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Tabela wyników"/>
+                                <connections>
+                                    <segue destination="HZP-Xq-jAW" kind="show" id="298-G6-06q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-rh-lni">
+                                <rect key="frame" x="26" y="332" width="316" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Test na refleks w rozszerzonej rzeczywistości"/>
+                                <connections>
+                                    <segue destination="MMN-ip-KgG" kind="presentation" id="L8s-Tj-asz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Lwv-6i-C5M"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V5B-ui-EhU"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="900" y="-950.37481259370327"/>
+        </scene>
+        <!--Psycho Test Selector Controller-->
+        <scene sceneID="0jh-hl-NdW">
+            <objects>
+                <viewController id="JRe-1r-YyC" customClass="PsychoTestSelectorController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sAL-Qv-n5U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PsychoTestSelector - wybór testów psycho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kia-xE-Urz">
+                                <rect key="frame" x="30" y="219" width="329" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-Y9-DUV">
+                                <rect key="frame" x="29" y="320" width="316" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Test IQ"/>
+                                <connections>
+                                    <segue destination="hUC-fd-dVd" kind="show" id="Lch-xU-xXb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW1-KJ-obi">
+                                <rect key="frame" x="29" y="405" width="316" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Test Ravena"/>
+                                <connections>
+                                    <segue destination="Wmt-j0-zBW" kind="show" id="5J7-6a-nXo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7n-hV-oJ6">
+                                <rect key="frame" x="29" y="492" width="316" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Test Ishihara"/>
+                                <connections>
+                                    <segue destination="NCY-d6-OWv" kind="show" id="iCx-ZF-fJH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="56b-u5-sR6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uh2-Gl-Ed0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756" y="-950"/>
+        </scene>
+        <!--Test Raven Story Controller-->
+        <scene sceneID="HUP-a9-jQS">
+            <objects>
+                <viewController id="Wmt-j0-zBW" customClass="TestRavenStoryController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qmE-JO-ibD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="so4-rG-nyn">
+                                <rect key="frame" x="140" y="510" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80989184260000002" green="0.74086620120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Uruchom test"/>
+                                <connections>
+                                    <segue destination="neF-eq-5x1" kind="show" id="NxC-5e-NmG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wprowadzenie do Ravena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvR-IM-xeD">
+                                <rect key="frame" x="89" y="323" width="197" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.73266445142406478" blue="0.13134463746002289" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="TLw-Xb-LIJ"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <color key="backgroundColor" red="1" green="0.73266445142406478" blue="0.13134463746002289" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8X3-F0-C3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2565.5999999999999" y="-775.86206896551732"/>
+        </scene>
+        <!--Score Board Controller-->
+        <scene sceneID="v1O-I5-0Fa">
+            <objects>
+                <viewController id="HZP-Xq-jAW" customClass="ScoreBoardController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XD2-f3-Sq8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tabela wyników" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKo-7I-oAW">
+                                <rect key="frame" x="127" y="305" width="120" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZgP-Fi-eaQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFM-9D-VfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="-203"/>
+        </scene>
+        <!--Test Ishihara Story Controller-->
+        <scene sceneID="o1O-NE-AAi">
+            <objects>
+                <viewController id="NCY-d6-OWv" customClass="TestIshiharaStoryController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jop-GN-81z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCt-qe-IJD">
+                                <rect key="frame" x="140" y="492" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.73266445140000003" blue="0.1313446375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Uruchom test"/>
+                                <connections>
+                                    <segue destination="QMp-Uf-UI6" kind="show" id="yj1-jh-bbC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wprowadzenie do Ishihara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ6-IW-kV5">
+                                <rect key="frame" x="86" y="323" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80989184264161007" green="0.74086620117305801" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="aig-6P-RJ1"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <color key="backgroundColor" red="0.80989184264161007" green="0.74086620117305801" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTc-dW-33c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2569" y="-115"/>
+        </scene>
+        <!--Test Ishihara Controller-->
+        <scene sceneID="pQW-o4-SVI">
+            <objects>
+                <viewController id="QMp-Uf-UI6" customClass="TestIshiharaController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tgk-FE-Q4c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ishihara test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPT-qN-1JR">
+                                <rect key="frame" x="140" y="323" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80989184260000002" green="0.74086620120000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4oa-in-6D0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DlN-KM-56S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3287" y="-116"/>
+        </scene>
+        <!--Test Raven Controller-->
+        <scene sceneID="dX0-hw-Oxw">
+            <objects>
+                <viewController id="neF-eq-5x1" customClass="TestRavenController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HhI-Le-IF5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test Ravena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRR-Dx-ppH">
+                                <rect key="frame" x="141" y="323" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.73266445140000003" blue="0.1313446375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="l3N-kr-vVf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUu-c1-zHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3280.8000000000002" y="-776.76161919040487"/>
+        </scene>
+        <!--TestIQ Story Controller-->
+        <scene sceneID="y86-Op-J6u">
+            <objects>
+                <viewController id="hUC-fd-dVd" customClass="TestIQStoryController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJC-IV-fqr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test IQ wprowadzenie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urg-UT-igy">
+                                <rect key="frame" x="103" y="323" width="168" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42S-b5-6Ju">
+                                <rect key="frame" x="140" y="522" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.73266445140000003" blue="0.1313446375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Uruchom test"/>
+                                <connections>
+                                    <segue destination="bEA-X8-iOM" kind="show" id="9Rj-pr-fIp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11672686188604409" green="0.7802949896642466" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="2Z0-pd-AIl"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <color key="backgroundColor" red="0.11672686188604409" green="0.7802949896642466" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y9N-go-Eh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2567.1999999999998" y="-1437.0314842578712"/>
+        </scene>
+        <!--TestIQ Controller-->
+        <scene sceneID="1da-ie-Rcc">
+            <objects>
+                <viewController id="bEA-X8-iOM" customClass="TestIQController" customModule="PsychoTestsAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nUB-i2-T3b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test IQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lA-CB-pj8">
+                                <rect key="frame" x="160" y="323" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11672686190000001" green="0.7802949897" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Nav-L7-oe2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxE-S5-Q0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3287.1999999999998" y="-1437.0314842578712"/>
         </scene>
         <!--Controller-->
         <scene sceneID="QLI-FT-5fx">
             <objects>
                 <viewController id="MMN-ip-KgG" customClass="ARController" customModule="PsychoTestsAR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eYW-Ch-8SP">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="eYW-Ch-8SP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOj-ig-bMc">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mOj-ig-bMc">
+                                <rect key="frame" x="0.0" y="20" width="667" height="627"/>
                             </arscnView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" text="ML AR" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-PM-rbN">
-                                <rect key="frame" x="0.0" y="248" width="135" height="127"/>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" ambiguous="YES" text="ML AR" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-PM-rbN">
+                                <rect key="frame" x="0.0" y="520" width="135" height="127"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="127" id="PxQ-FW-MQe"/>
@@ -69,13 +385,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kK-de-VHj">
-                                <rect key="frame" x="18" y="30" width="48" height="24"/>
+                                <rect key="frame" x="18" y="50" width="48" height="4"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.3615510971" green="1" blue="0.13503511430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iz2-Re-UuU">
-                                <rect key="frame" x="71" y="79" width="538" height="217"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iz2-Re-UuU">
+                                <rect key="frame" x="71" y="99" width="246" height="469"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="krP-0M-S7v">
                                         <rect key="frame" x="15" y="8" width="396" height="143"/>
@@ -84,7 +400,7 @@
                                             <constraint firstAttribute="width" constant="396" id="n5S-85-Rp3"/>
                                             <constraint firstAttribute="height" constant="143" id="tZ8-bu-ikW"/>
                                         </constraints>
-                                        <mutableString key="text">Witaj! Za chwilę rozpoczniesz test. Test będzie polegał na pokazaniu właściwej opcji zależnie od wyświetlanego obiektu. Opcję pokazujesz dłonią. Zostanie wyświetlonych 20 obiektów, czas reakcji na obiekt to 2 sek Dłoń otwarta - obiekt zielony Pięść - obiekt czerwony</mutableString>
+                                        <string key="text">Witaj! Za chwilę rozpoczniesz test. Test będzie polegał na pokazaniu właściwej opcji zależnie od wyświetlanego obiektu. Opcję pokazujesz dłonią. Zostanie wyświetlonych 20 obiektów, czas reakcji na obiekt to 2 sek Dłoń otwarta - obiekt zielony Pięść - obiekt czerwony</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -108,9 +424,6 @@
                                             <constraint firstAttribute="width" constant="97" id="iDJ-KB-BMM"/>
                                         </constraints>
                                         <state key="normal" title="Powrót"/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="Qav-qx-DGc"/>
-                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="2Ne-xW-Pk7">
                                         <rect key="frame" x="419" y="31" width="114" height="96"/>
@@ -141,7 +454,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="4iK-Gt-dyI">
-                                <rect key="frame" x="10" y="0.0" width="64" height="64"/>
+                                <rect key="frame" x="10" y="20" width="64" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="xAH-Dp-3jm"/>
                                 </constraints>
@@ -197,7 +510,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQ6-Lo-0GY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065.5172413793105" y="-951.20000000000005"/>
+            <point key="canvasLocation" x="900" y="-1683"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pSy-rm-t1f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DDI-DY-wTG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PXy-gu-Cz2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PcH-9o-guV" kind="relationship" relationship="rootViewController" id="Krv-Hk-9oV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBM-vX-egE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.200000000000003" y="-950.37481259370327"/>
         </scene>
     </scenes>
     <resources>
