@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +50,6 @@
         <!--Main Menu Controller-->
         <scene sceneID="d6a-kb-wyF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fjm-Bs-1kB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PcH-9o-guV" customClass="MainMenuController" customModule="PsychoTestsAR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ix-08-u9N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -87,7 +86,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Test na refleks w rozszerzonej rzeczywistości"/>
                                 <connections>
-                                    <segue destination="MMN-ip-KgG" kind="presentation" id="L8s-Tj-asz"/>
+                                    <segue destination="MMN-ip-KgG" kind="presentation" identifier="" id="L8s-Tj-asz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,8 +95,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="V5B-ui-EhU"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjm-Bs-1kB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="-950.37481259370327"/>
+            <point key="canvasLocation" x="790" y="-940"/>
         </scene>
         <!--Psycho Test Selector Controller-->
         <scene sceneID="0jh-hl-NdW">
@@ -424,6 +424,9 @@
                                             <constraint firstAttribute="width" constant="97" id="iDJ-KB-BMM"/>
                                         </constraints>
                                         <state key="normal" title="Powrót"/>
+                                        <connections>
+                                            <segue destination="PcH-9o-guV" kind="show" identifier="mainMenuSegue" id="p6d-QI-60M"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="2Ne-xW-Pk7">
                                         <rect key="frame" x="419" y="31" width="114" height="96"/>
@@ -465,6 +468,13 @@
                                     <constraint firstAttribute="height" constant="64" id="GWY-dr-4dQ"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="⤵️ " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fgm-tD-Bxh">
+                                <rect key="frame" x="0.0" y="295" width="375" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -500,6 +510,7 @@
                         <outlet property="debugConsole" destination="Pki-PM-rbN" id="Ofu-VL-v7I"/>
                         <outlet property="imgScoreboard" destination="4iK-Gt-dyI" id="T9Y-PG-NBF"/>
                         <outlet property="imgStopWatch" destination="zdY-Qf-YyW" id="nwz-ch-0q9"/>
+                        <outlet property="lblChangeView" destination="Fgm-tD-Bxh" id="qzG-DM-Wqs"/>
                         <outlet property="lblCounter" destination="4kK-de-VHj" id="cqR-gj-3tp"/>
                         <outlet property="lblTimer" destination="Nex-PF-drN" id="eha-JX-03r"/>
                         <outlet property="sceneView" destination="mOj-ig-bMc" id="LLt-6A-ffW"/>
@@ -510,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQ6-Lo-0GY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="-1683"/>
+            <point key="canvasLocation" x="898.39999999999998" y="-1684.4077961019491"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pSy-rm-t1f">
@@ -532,8 +543,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="info" width="409.60000610351562" height="409.60000610351562"/>
-        <image name="score" width="192" height="192"/>
-        <image name="stopwatch" width="192" height="192"/>
+        <image name="info" width="512" height="512"/>
+        <image name="score" width="256" height="256"/>
+        <image name="stopwatch" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="p6d-QI-60M"/>
+    </inferredMetricsTieBreakers>
 </document>

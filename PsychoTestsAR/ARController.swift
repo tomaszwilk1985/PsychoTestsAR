@@ -23,6 +23,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var txtInfo: UITextView! // info show
     @IBOutlet weak var imgStopWatch: UIImageView! // image scoreboard
     @IBOutlet weak var imgScoreboard: UIImageView! // image stopwatch
+    @IBOutlet weak var lblChangeView: UITextField!
     
     //Scene properties
     var MyBox = SCNBox()
@@ -36,37 +37,70 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     //Additional variables
     var hitCounter: Int = 0 // total hit count
-    var objectToEnd: Int = 20
+    var objectToEnd: Int = 3
     var isStarted: Bool = false
     var currentDisplayObject = ""
     var currentMLRecognize = ""
+
     
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     var visionRequests = [VNRequest]()
     
     
+    
+    var mFirstStart = true
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+            detectOrientation()
+    }
+    
+    func detectOrientation() {
+        if UIDevice.current.orientation.isLandscape {
+           // print("Landscape")
+            self.lblCounter.isHidden = false
+            self.lblTimer.isHidden = false
+            self.symbolOverlay.isHidden = false
+            self.imgStopWatch.isHidden = false
+            self.imgScoreboard.isHidden = false
+            self.lblChangeView.isHidden = true
+            
+            if(isStarted){
+                self.scrollInfo.isHidden = true
+            }
+            else
+            {
+                self.scrollInfo.isHidden = false
+            }
+            
+        } else {
+           // print("Portrait")
+            self.lblChangeView.isHidden = false
+            self.scrollInfo.isHidden = true
+            self.lblCounter.isHidden = true
+            self.lblTimer.isHidden = true
+            self.symbolOverlay.isHidden = true
+            self.imgStopWatch.isHidden = true
+            self.imgScoreboard.isHidden = true
+        }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        detectOrientation()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // --- ORIENTATION ---
-        
-        let value = UIInterfaceOrientation.landscapeLeft.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
+
         
         // --- ARKIT ---
         
         // Set the view's delegate
         sceneView.delegate = self
-        
+
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
-        // Create a new scene
-       // let scene = SCNScene() // SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-       // sceneView.scene = scene
 
         // --- ML & VISION ---
         
@@ -80,19 +114,9 @@ class ARController: UIViewController, ARSCNViewDelegate {
         classificationRequest.imageCropAndScaleOption = VNImageCropAndScaleOption.centerCrop // Crop from centre of images and scale to appropriate size.
         visionRequests = [classificationRequest]
         
-        // Begin Loop to Update CoreML
-        loopCoreMLUpdate()
-        
-    
-        
     }
     
-    
-    // Orientation setup
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .landscape
-    }
-    
+
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,7 +126,8 @@ class ARController: UIViewController, ARSCNViewDelegate {
         let configuration = ARWorldTrackingConfiguration()
         
         // Run the view's session
-        sceneView.session.run(configuration)
+        sceneView.session.run(configuration, options: .resetTracking)
+        mFirstStart = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -129,12 +154,14 @@ class ARController: UIViewController, ARSCNViewDelegate {
     // MARK: - MACHINE LEARNING
     
     func loopCoreMLUpdate() {
+        if (isStarted) {
         // Continuously run CoreML whenever it's ready. (Preventing 'hiccups' in Frame Rate)
         dispatchQueueML.async {
             // 1. Run Update.
             self.updateCoreML()
             // 2. Loop this function.
             self.loopCoreMLUpdate()
+        }
         }
     }
     
@@ -168,7 +195,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
         
         // Get Classifications
         let classifications = observations[0...2] // top 3 results
-            .flatMap({ $0 as? VNClassificationObservation })
+            .compactMap({ $0 as? VNClassificationObservation })
             .map({ "\($0.identifier) \(String(format:" : %.2f", $0.confidence))" })
             .joined(separator: "\n")
         
@@ -229,7 +256,8 @@ class ARController: UIViewController, ARSCNViewDelegate {
             self.imgScoreboard.isHidden = true
             self.txtInfo.text = "Twój wynik to: " + lblCounter.text!
             
-           // isStarted = false
+            let server = ServerAction()
+            server.UploadDataServer(testNumberIn: 4, sumOfPiontsIn: hitCounter, info: self.lblCounter)
         }
 
     }
@@ -256,39 +284,6 @@ class ARController: UIViewController, ARSCNViewDelegate {
         self.boxNode.isHidden = false
         
         MyBox = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
-        
-        //        let greenMaterial = SCNMaterial()
-        //        greenMaterial.diffuse.contents = UIImage(named: "g")
-        //        greenMaterial.locksAmbientWithDiffuse = true;
-        //
-        //        let redMaterial = SCNMaterial()
-        //        redMaterial.diffuse.contents = UIImage(named: "r")
-        //        redMaterial.locksAmbientWithDiffuse = true;
-        //
-        //
-        //        let blueMaterial  = SCNMaterial()
-        //        blueMaterial.diffuse.contents = UIImage(named: "b")
-        //        blueMaterial.locksAmbientWithDiffuse = true;
-        //
-        //
-        //        let yellowMaterial = SCNMaterial()
-        //        yellowMaterial.diffuse.contents = UIImage(named: "y")
-        //        yellowMaterial.locksAmbientWithDiffuse = true;
-        //
-        //
-        //        let purpleMaterial = SCNMaterial()
-        //        purpleMaterial.diffuse.contents = UIImage(named: "p")
-        //        purpleMaterial.locksAmbientWithDiffuse = true;
-        //
-        //
-        //        let WhiteMaterial = SCNMaterial()
-        //        WhiteMaterial.diffuse.contents = UIImage(named: "w")
-        //        WhiteMaterial.locksAmbientWithDiffuse   = true;
-        //
-        //
-        //        MyBox.materials =  [greenMaterial,  redMaterial,    blueMaterial,
-        //                             yellowMaterial, purpleMaterial, WhiteMaterial];
-        
         
         var colors = [UIColor.green, // front
             UIColor.init(red: 0, green: 255, blue: 0, alpha: 0.5), // right
@@ -338,6 +333,8 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func hideInfoPanel(_ sender: UIButton) {
 
+        if (objectToEnd > 0)
+        {
             self.scrollInfo.isHidden = true
             self.lblCounter.isHidden = false
             self.lblTimer.isHidden = false
@@ -349,7 +346,18 @@ class ARController: UIViewController, ARSCNViewDelegate {
             //important step - create box on AR
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerEvents), userInfo: nil, repeats: true)
             isStarted = true
-        
+            // Begin Loop to Update CoreML
+            loopCoreMLUpdate()
+        }
+        else
+        {
+            mFirstStart = true
+            isStarted = false
+            self.scrollInfo.isHidden = false
+            objectToEnd = 20
+            performSegue(withIdentifier: "mainMenuSegue", sender: self)
+
+        }
     }
     
 
