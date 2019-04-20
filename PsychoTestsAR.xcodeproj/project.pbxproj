@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F0E2CC3226A5ED20029E7BC /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E2CC0226A5ED10029E7BC /* InterestCollectionViewCell.swift */; };
-		0F0E2CC4226A5ED20029E7BC /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E2CC1226A5ED20029E7BC /* InterestsViewController.swift */; };
-		0F0E2CC5226A5ED20029E7BC /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E2CC2226A5ED20029E7BC /* Interest.swift */; };
 		0F164D782253EFAC00F04B45 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F164D772253EFAC00F04B45 /* MainMenuController.swift */; };
 		0FD90D0722551424003BF819 /* ScoreBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D0622551424003BF819 /* ScoreBoardController.swift */; };
 		0FD90D09225514A2003BF819 /* PsychoTestSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D08225514A2003BF819 /* PsychoTestSelectorController.swift */; };
@@ -17,8 +14,6 @@
 		0FD90D0D225514FA003BF819 /* TestIQController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D0C225514FA003BF819 /* TestIQController.swift */; };
 		0FD90D0F2255150E003BF819 /* TestRavenStoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D0E2255150E003BF819 /* TestRavenStoryController.swift */; };
 		0FD90D1122551524003BF819 /* TestRavenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D1022551524003BF819 /* TestRavenController.swift */; };
-		0FD90D132255153F003BF819 /* TestIshiharaStoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D122255153F003BF819 /* TestIshiharaStoryController.swift */; };
-		0FD90D1522551556003BF819 /* TestIshiharaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D1422551556003BF819 /* TestIshiharaController.swift */; };
 		0FDE98B72243F34D004D72F9 /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDE98B62243F34D004D72F9 /* ARController.swift */; };
 		0FE40854225BC8AC00333132 /* ServerCallAndResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE40853225BC8AC00333132 /* ServerCallAndResponse.swift */; };
 		0FE64B2122402EC300A376DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE64B2022402EC300A376DF /* AppDelegate.swift */; };
@@ -28,6 +23,15 @@
 		0FE64B2E22402EC400A376DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE64B2C22402EC400A376DF /* LaunchScreen.storyboard */; };
 		0FE64B3922402EC500A376DF /* PsychoTestsARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE64B3822402EC500A376DF /* PsychoTestsARTests.swift */; };
 		0FE64B4422402EC500A376DF /* PsychoTestsARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE64B4322402EC500A376DF /* PsychoTestsARUITests.swift */; };
+		0FFA843F226B0D9600E9EB4C /* IshiharaQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA843D226B0D9600E9EB4C /* IshiharaQuestion.swift */; };
+		0FFA8440226B0D9600E9EB4C /* IshiharaQuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA843E226B0D9600E9EB4C /* IshiharaQuestionBank.swift */; };
+		0FFA8447226B0E2E00E9EB4C /* TestIshiharaStoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA8445226B0E2E00E9EB4C /* TestIshiharaStoryController.swift */; };
+		0FFA8448226B0E2E00E9EB4C /* TestIshiharaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA8446226B0E2E00E9EB4C /* TestIshiharaController.swift */; };
+		0FFA844A226B0E4800E9EB4C /* CheckNetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA8449226B0E4800E9EB4C /* CheckNetConnection.swift */; };
+		0FFA844E226B0F2500E9EB4C /* IshiharaResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA844D226B0F2500E9EB4C /* IshiharaResultViewController.swift */; };
+		0FFA8452226B11E500E9EB4C /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA844F226B11E400E9EB4C /* Interest.swift */; };
+		0FFA8453226B11E500E9EB4C /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA8450226B11E400E9EB4C /* InterestsViewController.swift */; };
+		0FFA8454226B11E500E9EB4C /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA8451226B11E400E9EB4C /* InterestCollectionViewCell.swift */; };
 		0FFC2F3122441AEA0067D159 /* hand_ml.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC2F3022441AEA0067D159 /* hand_ml.mlmodel */; };
 /* End PBXBuildFile section */
 
@@ -49,9 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F0E2CC0226A5ED10029E7BC /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InterestCollectionViewCell.swift; path = "../../PsychoTestsAR_arch/PsychoTST-master/PsychoTestsAR/InterestCollectionViewCell.swift"; sourceTree = "<group>"; };
-		0F0E2CC1226A5ED20029E7BC /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InterestsViewController.swift; path = "../../PsychoTestsAR_arch/PsychoTST-master/PsychoTestsAR/InterestsViewController.swift"; sourceTree = "<group>"; };
-		0F0E2CC2226A5ED20029E7BC /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Interest.swift; path = "../../PsychoTestsAR_arch/PsychoTST-master/PsychoTestsAR/Interest.swift"; sourceTree = "<group>"; };
 		0F164D772253EFAC00F04B45 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		0FD90D0622551424003BF819 /* ScoreBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardController.swift; sourceTree = "<group>"; };
 		0FD90D08225514A2003BF819 /* PsychoTestSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychoTestSelectorController.swift; sourceTree = "<group>"; };
@@ -59,8 +60,6 @@
 		0FD90D0C225514FA003BF819 /* TestIQController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIQController.swift; sourceTree = "<group>"; };
 		0FD90D0E2255150E003BF819 /* TestRavenStoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRavenStoryController.swift; sourceTree = "<group>"; };
 		0FD90D1022551524003BF819 /* TestRavenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRavenController.swift; sourceTree = "<group>"; };
-		0FD90D122255153F003BF819 /* TestIshiharaStoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIshiharaStoryController.swift; sourceTree = "<group>"; };
-		0FD90D1422551556003BF819 /* TestIshiharaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIshiharaController.swift; sourceTree = "<group>"; };
 		0FDE98B62243F34D004D72F9 /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		0FE40853225BC8AC00333132 /* ServerCallAndResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCallAndResponse.swift; sourceTree = "<group>"; };
 		0FE64B1D22402EC300A376DF /* PsychoTestsAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychoTestsAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +75,15 @@
 		0FE64B3F22402EC500A376DF /* PsychoTestsARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsychoTestsARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE64B4322402EC500A376DF /* PsychoTestsARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychoTestsARUITests.swift; sourceTree = "<group>"; };
 		0FE64B4522402EC500A376DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FFA843D226B0D9600E9EB4C /* IshiharaQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IshiharaQuestion.swift; sourceTree = "<group>"; };
+		0FFA843E226B0D9600E9EB4C /* IshiharaQuestionBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IshiharaQuestionBank.swift; sourceTree = "<group>"; };
+		0FFA8445226B0E2E00E9EB4C /* TestIshiharaStoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestIshiharaStoryController.swift; sourceTree = "<group>"; };
+		0FFA8446226B0E2E00E9EB4C /* TestIshiharaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestIshiharaController.swift; sourceTree = "<group>"; };
+		0FFA8449226B0E4800E9EB4C /* CheckNetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckNetConnection.swift; sourceTree = "<group>"; };
+		0FFA844D226B0F2500E9EB4C /* IshiharaResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IshiharaResultViewController.swift; sourceTree = "<group>"; };
+		0FFA844F226B11E400E9EB4C /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		0FFA8450226B11E400E9EB4C /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		0FFA8451226B11E400E9EB4C /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FFC2F3022441AEA0067D159 /* hand_ml.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = hand_ml.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,8 +141,6 @@
 				0FD90D0C225514FA003BF819 /* TestIQController.swift */,
 				0FD90D0E2255150E003BF819 /* TestRavenStoryController.swift */,
 				0FD90D1022551524003BF819 /* TestRavenController.swift */,
-				0FD90D122255153F003BF819 /* TestIshiharaStoryController.swift */,
-				0FD90D1422551556003BF819 /* TestIshiharaController.swift */,
 				0FD90D08225514A2003BF819 /* PsychoTestSelectorController.swift */,
 				0FD90D0622551424003BF819 /* ScoreBoardController.swift */,
 				0FDE98B62243F34D004D72F9 /* ARController.swift */,
@@ -142,12 +148,18 @@
 				0FE64B2C22402EC400A376DF /* LaunchScreen.storyboard */,
 				0FE64B2F22402EC400A376DF /* Info.plist */,
 				0FE64B2722402EC300A376DF /* PsychoTestsAR.xcdatamodeld */,
+				0FFA8446226B0E2E00E9EB4C /* TestIshiharaController.swift */,
+				0FFA8445226B0E2E00E9EB4C /* TestIshiharaStoryController.swift */,
 				0FFC2F3022441AEA0067D159 /* hand_ml.mlmodel */,
 				0F164D772253EFAC00F04B45 /* MainMenuController.swift */,
+				0FFA844F226B11E400E9EB4C /* Interest.swift */,
+				0FFA8451226B11E400E9EB4C /* InterestCollectionViewCell.swift */,
+				0FFA8450226B11E400E9EB4C /* InterestsViewController.swift */,
 				0FE40853225BC8AC00333132 /* ServerCallAndResponse.swift */,
-				0F0E2CC2226A5ED20029E7BC /* Interest.swift */,
-				0F0E2CC0226A5ED10029E7BC /* InterestCollectionViewCell.swift */,
-				0F0E2CC1226A5ED20029E7BC /* InterestsViewController.swift */,
+				0FFA8449226B0E4800E9EB4C /* CheckNetConnection.swift */,
+				0FFA844D226B0F2500E9EB4C /* IshiharaResultViewController.swift */,
+				0FFA843D226B0D9600E9EB4C /* IshiharaQuestion.swift */,
+				0FFA843E226B0D9600E9EB4C /* IshiharaQuestionBank.swift */,
 			);
 			path = PsychoTestsAR;
 			sourceTree = "<group>";
@@ -301,23 +313,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0E2CC3226A5ED20029E7BC /* InterestCollectionViewCell.swift in Sources */,
-				0FD90D1522551556003BF819 /* TestIshiharaController.swift in Sources */,
 				0FD90D09225514A2003BF819 /* PsychoTestSelectorController.swift in Sources */,
-				0F0E2CC5226A5ED20029E7BC /* Interest.swift in Sources */,
 				0FD90D0D225514FA003BF819 /* TestIQController.swift in Sources */,
 				0FDE98B72243F34D004D72F9 /* ARController.swift in Sources */,
 				0FD90D0722551424003BF819 /* ScoreBoardController.swift in Sources */,
+				0FFA8453226B11E500E9EB4C /* InterestsViewController.swift in Sources */,
+				0FFA8447226B0E2E00E9EB4C /* TestIshiharaStoryController.swift in Sources */,
+				0FFA8452226B11E500E9EB4C /* Interest.swift in Sources */,
 				0FD90D1122551524003BF819 /* TestRavenController.swift in Sources */,
-				0FD90D132255153F003BF819 /* TestIshiharaStoryController.swift in Sources */,
 				0FE64B2922402EC300A376DF /* PsychoTestsAR.xcdatamodeld in Sources */,
 				0FD90D0F2255150E003BF819 /* TestRavenStoryController.swift in Sources */,
-				0F0E2CC4226A5ED20029E7BC /* InterestsViewController.swift in Sources */,
+				0FFA8448226B0E2E00E9EB4C /* TestIshiharaController.swift in Sources */,
+				0FFA844A226B0E4800E9EB4C /* CheckNetConnection.swift in Sources */,
 				0FE40854225BC8AC00333132 /* ServerCallAndResponse.swift in Sources */,
 				0FFC2F3122441AEA0067D159 /* hand_ml.mlmodel in Sources */,
 				0FE64B2122402EC300A376DF /* AppDelegate.swift in Sources */,
+				0FFA8454226B11E500E9EB4C /* InterestCollectionViewCell.swift in Sources */,
 				0FD90D0B225514E7003BF819 /* TestIQStoryController.swift in Sources */,
+				0FFA843F226B0D9600E9EB4C /* IshiharaQuestion.swift in Sources */,
+				0FFA8440226B0D9600E9EB4C /* IshiharaQuestionBank.swift in Sources */,
 				0F164D782253EFAC00F04B45 /* MainMenuController.swift in Sources */,
+				0FFA844E226B0F2500E9EB4C /* IshiharaResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
