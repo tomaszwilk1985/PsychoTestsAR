@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="TESTY PSYCHOLOGICZNE">
+                                <state key="normal" title="Testy psychologiczne">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -35,7 +35,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="TABELA WYNIKÓW">
+                                <state key="normal" title="Moje wyniki">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -47,7 +47,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="TEST NA REFLEKS">
+                                <state key="normal" title="Test na refleks">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -81,7 +81,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="TEST IQ">
+                                <state key="normal" title="Test IQ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -93,7 +93,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="TEST RAVENA">
+                                <state key="normal" title="Test Ravena">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -105,7 +105,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="TEST ISHIHARA">
+                                <state key="normal" title="Test Ishihara">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -120,10 +120,13 @@
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="56b-u5-sR6"/>
                     </view>
+                    <connections>
+                        <segue destination="PcH-9o-guV" kind="show" id="w0B-Lg-Ci7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uh2-Gl-Ed0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1756" y="-950.37481259370327"/>
+            <point key="canvasLocation" x="1703" y="-940"/>
         </scene>
         <!--Test Raven Story Controller-->
         <scene sceneID="HUP-a9-jQS">
@@ -176,6 +179,9 @@
                                 <state key="normal" title="MENU GŁÓWNE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_go_start:" destination="HZP-Xq-jAW" eventType="touchUpInside" id="ApZ-zI-k3Q"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twoje Testy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saT-TT-EcF">
                                 <rect key="frame" x="27" y="34" width="324" height="24"/>
@@ -209,10 +215,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZgP-Fi-eaQ"/>
                     </view>
+                    <connections>
+                        <outlet property="btn_start" destination="c9g-LY-5m9" id="5lG-pf-exO"/>
+                        <outlet property="lbl_apple_id" destination="Mxi-Vg-cUI" id="z3t-Uz-y3s"/>
+                        <outlet property="testListUser" destination="9qu-3e-fsb" id="9H5-9F-yrO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFM-9D-VfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="-176"/>
+            <point key="canvasLocation" x="790" y="-116"/>
         </scene>
         <!--Test Ishihara Story Controller-->
         <scene sceneID="o1O-NE-AAi">
@@ -300,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTc-dW-33c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2568.8000000000002" y="-115.59220389805098"/>
+            <point key="canvasLocation" x="2566" y="-116"/>
         </scene>
         <!--Test Ishihara Controller-->
         <scene sceneID="pQW-o4-SVI">
@@ -474,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DlN-KM-56S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3285.5999999999999" y="-116.49175412293854"/>
+            <point key="canvasLocation" x="3287" y="-116"/>
         </scene>
         <!--Ishihara Result View Controller-->
         <scene sceneID="vxS-X6-8ap">
@@ -555,7 +566,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKG-yE-TPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4166" y="-116"/>
+            <point key="canvasLocation" x="4044" y="-116"/>
         </scene>
         <!--Test Raven Controller-->
         <scene sceneID="dX0-hw-Oxw">
@@ -615,7 +626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9N-go-Eh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2567.1999999999998" y="-1437.0314842578712"/>
+            <point key="canvasLocation" x="2585" y="-1437"/>
         </scene>
         <!--TestIQ Controller-->
         <scene sceneID="1da-ie-Rcc">
@@ -826,7 +837,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBM-vX-egE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-49" y="-940"/>
+            <point key="canvasLocation" x="-111" y="-950"/>
         </scene>
         <!--Interests View Controller-->
         <scene sceneID="wPs-I8-1Mx">
@@ -847,7 +858,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzI-fP-Uw7">
-                                <rect key="frame" x="29" y="102" width="317" height="1"/>
+                                <rect key="frame" x="29" y="96" width="317" height="1"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4378851232" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="p13-Ok-vGP"/>
@@ -855,7 +866,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-l4-bdS">
-                                <rect key="frame" x="29" y="111" width="330" height="479"/>
+                                <rect key="frame" x="29" y="105" width="330" height="485"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JP9-ar-98R">
                                     <size key="itemSize" width="231" height="400"/>
@@ -865,7 +876,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCell" id="5IQ-Yy-YME" customClass="InterestCollectionViewCell" customModule="PsychoTestsAR" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="39.5" width="231" height="400"/>
+                                        <rect key="frame" x="0.0" y="42.5" width="231" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="231" height="400"/>
@@ -911,9 +922,9 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Psychotest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWP-xj-co1">
-                                <rect key="frame" x="16" y="56" width="204" height="47"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Psychotests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWP-xj-co1">
+                                <rect key="frame" x="16" y="56" width="330" height="47"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -947,7 +958,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mon-dk-X6h" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1007" y="-950"/>
+            <point key="canvasLocation" x="-1007.2" y="-950.37481259370327"/>
         </scene>
     </scenes>
     <resources>
@@ -959,7 +970,7 @@
         <image name="title" width="402" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fQG-Fi-jjP"/>
+        <segue reference="fq9-KH-1S7"/>
         <segue reference="5sx-gE-cFp"/>
     </inferredMetricsTieBreakers>
 </document>
