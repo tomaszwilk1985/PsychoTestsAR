@@ -135,31 +135,10 @@
 		0FE64B1F22402EC300A376DF /* PsychoTestsAR */ = {
 			isa = PBXGroup;
 			children = (
-				0FE64B2022402EC300A376DF /* AppDelegate.swift */,
-				0FE64B2422402EC300A376DF /* Main.storyboard */,
-				0FD90D0A225514E7003BF819 /* TestIQStoryController.swift */,
-				0FD90D0C225514FA003BF819 /* TestIQController.swift */,
-				0FD90D0E2255150E003BF819 /* TestRavenStoryController.swift */,
-				0FD90D1022551524003BF819 /* TestRavenController.swift */,
-				0FD90D08225514A2003BF819 /* PsychoTestSelectorController.swift */,
-				0FD90D0622551424003BF819 /* ScoreBoardController.swift */,
-				0FDE98B62243F34D004D72F9 /* ARController.swift */,
-				0FE64B2A22402EC400A376DF /* Assets.xcassets */,
-				0FE64B2C22402EC400A376DF /* LaunchScreen.storyboard */,
 				0FE64B2F22402EC400A376DF /* Info.plist */,
-				0FE64B2722402EC300A376DF /* PsychoTestsAR.xcdatamodeld */,
-				0FFA8446226B0E2E00E9EB4C /* TestIshiharaController.swift */,
-				0FFA8445226B0E2E00E9EB4C /* TestIshiharaStoryController.swift */,
-				0FFC2F3022441AEA0067D159 /* hand_ml.mlmodel */,
-				0F164D772253EFAC00F04B45 /* MainMenuController.swift */,
-				0FFA844F226B11E400E9EB4C /* Interest.swift */,
-				0FFA8451226B11E400E9EB4C /* InterestCollectionViewCell.swift */,
-				0FFA8450226B11E400E9EB4C /* InterestsViewController.swift */,
-				0FE40853225BC8AC00333132 /* ServerCallAndResponse.swift */,
-				0FFA8449226B0E4800E9EB4C /* CheckNetConnection.swift */,
-				0FFA844D226B0F2500E9EB4C /* IshiharaResultViewController.swift */,
-				0FFA843D226B0D9600E9EB4C /* IshiharaQuestion.swift */,
-				0FFA843E226B0D9600E9EB4C /* IshiharaQuestionBank.swift */,
+				0FFA8456226B135200E9EB4C /* Model */,
+				0FFA8455226B12ED00E9EB4C /* Controller */,
+				0FFA8459226B146900E9EB4C /* View */,
 			);
 			path = PsychoTestsAR;
 			sourceTree = "<group>";
@@ -180,6 +159,51 @@
 				0FE64B4522402EC500A376DF /* Info.plist */,
 			);
 			path = PsychoTestsARUITests;
+			sourceTree = "<group>";
+		};
+		0FFA8455226B12ED00E9EB4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0FD90D0A225514E7003BF819 /* TestIQStoryController.swift */,
+				0FD90D0C225514FA003BF819 /* TestIQController.swift */,
+				0FD90D0E2255150E003BF819 /* TestRavenStoryController.swift */,
+				0FD90D1022551524003BF819 /* TestRavenController.swift */,
+				0FD90D08225514A2003BF819 /* PsychoTestSelectorController.swift */,
+				0FD90D0622551424003BF819 /* ScoreBoardController.swift */,
+				0FDE98B62243F34D004D72F9 /* ARController.swift */,
+				0FFA8446226B0E2E00E9EB4C /* TestIshiharaController.swift */,
+				0FFA8445226B0E2E00E9EB4C /* TestIshiharaStoryController.swift */,
+				0F164D772253EFAC00F04B45 /* MainMenuController.swift */,
+				0FFA8450226B11E400E9EB4C /* InterestsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0FFA8456226B135200E9EB4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FE64B2022402EC300A376DF /* AppDelegate.swift */,
+				0FE64B2722402EC300A376DF /* PsychoTestsAR.xcdatamodeld */,
+				0FFC2F3022441AEA0067D159 /* hand_ml.mlmodel */,
+				0FFA844F226B11E400E9EB4C /* Interest.swift */,
+				0FFA8451226B11E400E9EB4C /* InterestCollectionViewCell.swift */,
+				0FFA843E226B0D9600E9EB4C /* IshiharaQuestionBank.swift */,
+				0FE40853225BC8AC00333132 /* ServerCallAndResponse.swift */,
+				0FFA8449226B0E4800E9EB4C /* CheckNetConnection.swift */,
+				0FFA844D226B0F2500E9EB4C /* IshiharaResultViewController.swift */,
+				0FFA843D226B0D9600E9EB4C /* IshiharaQuestion.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0FFA8459226B146900E9EB4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FE64B2A22402EC400A376DF /* Assets.xcassets */,
+				0FE64B2422402EC300A376DF /* Main.storyboard */,
+				0FE64B2C22402EC400A376DF /* LaunchScreen.storyboard */,
+			);
+			path = "\U0010View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
