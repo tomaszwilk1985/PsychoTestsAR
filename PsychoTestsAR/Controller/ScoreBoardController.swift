@@ -37,7 +37,7 @@ class ScoreBoardController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = testListUser.dequeueReusableCell(withIdentifier: "user_tests_list", for: indexPath)
+        let cell = testListUser.dequeueReusableCell(withIdentifier: "user_test_result", for: indexPath)
         let testlist = user_data_tests.array(forKey: "usertests") as? [String] ?? [String]()
         cell.textLabel?.text = testlist[indexPath.row]
         cell.textLabel?.font = UIFont(name: "System", size: 7.0)
@@ -52,13 +52,13 @@ class ScoreBoardController: UIViewController, UITableViewDataSource, UITableView
             let arrCurrentRow: [String] = currentRow.components(separatedBy: " ")
             let outputDate: String = arrCurrentRow[1] + " " + arrCurrentRow[2]
             
-            let alert = UIAlertController(title: "USUWANIE TESTU", message: "Czy chcesz usunąć test?", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "USUŃ", style: .destructive){
+            let alert = UIAlertController(title: "Usuwanie testu", message: "Czy chcesz usunąć test?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Usuń", style: .destructive){
                 _ in
                 deleteTest()
                 
             })
-            alert.addAction(UIAlertAction(title: "NIE USUWAJ", style: .default){
+            alert.addAction(UIAlertAction(title: "Nie usuwaj", style: .default){
                 _ in
                 return
             })
@@ -86,8 +86,17 @@ class ScoreBoardController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         ServerReq.ShowMyTests()
-        lbl_apple_id.text = ServerReq.AppleID
+        lbl_apple_id.text = "Apple ID \(ServerReq.AppleID)"
         btn_start.layer.cornerRadius = 10
         
+    }
+    
+    override var shouldAutorotate: Bool {
+        if UIDevice.current.orientation.isLandscape == false {
+            return true
+        }
+        else {
+            return false
+        }
     }
 }

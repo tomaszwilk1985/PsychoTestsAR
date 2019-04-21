@@ -31,6 +31,17 @@ class TestIshiharaStoryController: UIViewController {
     }
     
     
+    override var shouldAutorotate: Bool {
+        if UIDevice.current.orientation.isLandscape == false {
+            return true
+        }
+        else {
+            return false
+        }
+        
+    }
+    
+    
     /*
      // MARK: - Navigation
      

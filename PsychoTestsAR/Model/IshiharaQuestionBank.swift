@@ -13,6 +13,8 @@ class IshiharaQuestionBank {
     
     init() {
         
+        list.append(IshiharaQuestion(image: "ishihara2", questionText: "Jaką widzisz liczbę?", choiceA: "2", choiceB: "3", choiceC: "4", choiceD: "Nie wiem", answer: 1))
+        
         list.append(IshiharaQuestion(image: "ishihara3", questionText: "Jaką widzisz liczbę?", choiceA: "3", choiceB: "4", choiceC: "7", choiceD: "Nie wiem", answer: 1))
         
         list.append(IshiharaQuestion(image: "ishihara5", questionText: "Jaką widzisz liczbę?", choiceA: "2", choiceB: "3", choiceC: "5", choiceD: "7", answer: 3))
@@ -40,6 +42,18 @@ class IshiharaQuestionBank {
         list.append(IshiharaQuestion(image: "ishihara73", questionText: "Jaką widzisz liczbę?", choiceA: "2", choiceB: "3", choiceC: "7", choiceD: "73", answer: 4))
         
         list.append(IshiharaQuestion(image: "ishihara74", questionText: "Jaką widzisz liczbę?", choiceA: "72", choiceB: "74", choiceC: "77", choiceD: "Nie wiem", answer: 2))
+        
+        list.append(IshiharaQuestion(image: "ishihara9", questionText: "Jaką widzisz liczbę?", choiceA: "3", choiceB: "6", choiceC: "9", choiceD: "Nie wiem", answer: 3))
+        
+        list.append(IshiharaQuestion(image: "ishihara14", questionText: "Jaką widzisz liczbę?", choiceA: "13", choiceB: "14", choiceC: "17", choiceD: "Nie wiem", answer: 2))
+        
+        list.append(IshiharaQuestion(image: "ishihara35", questionText: "Jaką widzisz liczbę?", choiceA: "33", choiceB: "34", choiceC: "35", choiceD: "Nie wiem", answer: 3))
+        
+        list.append(IshiharaQuestion(image: "ishihara57", questionText: "Jaką widzisz liczbę?", choiceA: "55", choiceB: "57", choiceC: "59", choiceD: "Nie wiem", answer: 2))
+        
+        list.append(IshiharaQuestion(image: "ishihara96", questionText: "Jaką widzisz liczbę?", choiceA: "93", choiceB: "96", choiceC: "99", choiceD: "Nie wiem", answer: 2))
+        
+        list.append(IshiharaQuestion(image: "ishihara97", questionText: "Jaką widzisz liczbę?", choiceA: "93", choiceB: "96", choiceC: "97", choiceD: "Nie wiem", answer: 3))
         
         list.append(IshiharaQuestion(image: "niewiem1", questionText: "Jaką widzisz liczbę?", choiceA: "1", choiceB: "3", choiceC: "7", choiceD: "Nie wiem", answer: 4))
         

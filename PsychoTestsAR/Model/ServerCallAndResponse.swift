@@ -204,7 +204,7 @@ class ServerAction {
                     var iterator:Int = 1
                     for row in json!! {
                         // let i = String(iterator)
-                        ID_tests.append("Data: " + (row["datetime"] as! String) + " | Nr Testu: " + (row["id_tests"] as! String) + " | Punkty: " + (row["points"] as! String))
+                        ID_tests.append("Nr Testu: " + (row["id_tests"] as! String) + " | Punkty: " + (row["points"] as! String))
                         iterator += 1
                         
                         //id_tests
