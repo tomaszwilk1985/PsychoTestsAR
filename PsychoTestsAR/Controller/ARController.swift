@@ -12,7 +12,7 @@ import ARKit
 import Vision
 
 class ARController: UIViewController, ARSCNViewDelegate {
-
+    
     @IBOutlet weak var sceneView: ARSCNView! // main scene
     @IBOutlet weak var debugConsole: UITextView! // ML detect params info
     @IBOutlet weak var symbolOverlay: UITextField! // ML detect object
@@ -37,11 +37,11 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     //Additional variables
     var hitCounter: Int = 0 // total hit count
-    var objectToEnd: Int = 3
+    var objectToEnd: Int = 10
     var isStarted: Bool = false
     var currentDisplayObject = ""
     var currentMLRecognize = ""
-
+    
     
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     var visionRequests = [VNRequest]()
@@ -52,12 +52,12 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-            detectOrientation()
+        detectOrientation()
     }
     
     func detectOrientation() {
         if UIDevice.current.orientation.isLandscape {
-           // print("Landscape")
+            // print("Landscape")
             self.lblCounter.isHidden = false
             self.lblTimer.isHidden = false
             self.symbolOverlay.isHidden = false
@@ -74,7 +74,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
             }
             
         } else {
-           // print("Portrait")
+            // print("Portrait")
             self.lblChangeView.isHidden = false
             self.scrollInfo.isHidden = true
             self.lblCounter.isHidden = true
@@ -92,16 +92,16 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         // --- ARKIT ---
         
         // Set the view's delegate
         sceneView.delegate = self
-
+        
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-
+        
         // --- ML & VISION ---
         
         // Setup Vision Model
@@ -116,7 +116,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
         
     }
     
-
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -135,7 +135,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
-        objectToEnd = 20
+        objectToEnd = 10
     }
     
     override func didReceiveMemoryWarning() {
@@ -155,13 +155,13 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     func loopCoreMLUpdate() {
         if (isStarted) {
-        // Continuously run CoreML whenever it's ready. (Preventing 'hiccups' in Frame Rate)
-        dispatchQueueML.async {
-            // 1. Run Update.
-            self.updateCoreML()
-            // 2. Loop this function.
-            self.loopCoreMLUpdate()
-        }
+            // Continuously run CoreML whenever it's ready. (Preventing 'hiccups' in Frame Rate)
+            dispatchQueueML.async {
+                // 1. Run Update.
+                self.updateCoreML()
+                // 2. Loop this function.
+                self.loopCoreMLUpdate()
+            }
         }
     }
     
@@ -256,10 +256,8 @@ class ARController: UIViewController, ARSCNViewDelegate {
             self.imgScoreboard.isHidden = true
             self.txtInfo.text = "Twój wynik to: " + lblCounter.text!
             
-            let server = ServerAction()
-            server.UploadDataServer(testNumberIn: 4, sumOfPiontsIn: hitCounter, info: self.lblCounter)
         }
-
+        
     }
     
     
@@ -308,7 +306,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
             currentDisplayObject = "red"
         }
         
-
+        
         
         let sideMaterials = colors.map { color -> SCNMaterial in
             let material = SCNMaterial()
@@ -324,15 +322,15 @@ class ARController: UIViewController, ARSCNViewDelegate {
         boxNode.eulerAngles.x = boxNode.eulerAngles.x - 10
         boxNode.eulerAngles.y = boxNode.eulerAngles.y - 10
         
-            scene.rootNode.addChildNode(boxNode)
-            sceneView.scene = scene
-
+        scene.rootNode.addChildNode(boxNode)
+        sceneView.scene = scene
+        
     }
     
     
     
     @IBAction func hideInfoPanel(_ sender: UIButton) {
-
+        
         if (objectToEnd > 0)
         {
             self.scrollInfo.isHidden = true
@@ -341,7 +339,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
             self.symbolOverlay.isHidden = false
             self.imgStopWatch.isHidden = false
             self.imgScoreboard.isHidden = false
-
+            
             // --- TIMER SETUP ---
             //important step - create box on AR
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerEvents), userInfo: nil, repeats: true)
@@ -351,30 +349,36 @@ class ARController: UIViewController, ARSCNViewDelegate {
         }
         else
         {
+            //set prameters
             mFirstStart = true
             isStarted = false
             self.scrollInfo.isHidden = false
-            objectToEnd = 20
+            objectToEnd = 10
+            //add score to table
+            let server = ServerAction()
+            server.UploadDataServer(testNumberIn: 4, sumOfPiontsIn: hitCounter, info: self.lblCounter)
+            //navigate to main screen
             performSegue(withIdentifier: "mainMenuSegue", sender: self)
-
+            
         }
     }
     
-
+    
     
     // MARK: - HIDE STATUS BAR
     override var prefersStatusBarHidden : Bool { return true }
 }
 
 
-    /*
-    // MARK: - Navigation
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 
