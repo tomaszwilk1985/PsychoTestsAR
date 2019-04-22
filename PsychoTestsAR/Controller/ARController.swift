@@ -211,13 +211,13 @@ class ARController: UIViewController, ARSCNViewDelegate {
             let topPredictionName = topPrediction.components(separatedBy: ":")[0].trimmingCharacters(in: .whitespaces)
             // Only display a prediction if confidence is above 1%
             let topPredictionScore:Float? = Float(topPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
-            if (topPredictionScore != nil && topPredictionScore! > 0.70) {
-                if (topPredictionName == "hand_fist") {
+            if (topPredictionScore != nil && topPredictionScore! > 0.80) {
+                if (topPredictionName == "hand_fist") { //hand_fist fist-UB-RHand
                     symbol = "👊"
                     self.currentMLRecognize = "fist"
                     self.onHitObject()
                 }
-                if (topPredictionName == "hand_open") {
+                if (topPredictionName == "hand_open") { //hand_open FIVE-UB-RHand
                     symbol = "🖐"
                     self.currentMLRecognize = "open"
                     self.onHitObject()
