@@ -11,8 +11,8 @@ import AudioToolbox
 
 class TestIQController: UIViewController {
     
-    let ServerRq = ServerAction()
     let userDataIQTests = UserDefaults.standard
+    
     var pointsResult: Int = 0
     var questionNumber: Int = 0
     var pickedAnser: Int = 0
@@ -34,7 +34,7 @@ class TestIQController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
     
-    let ServerRqe = ServerAction()
+    
     let user_data_tests = UserDefaults.standard
     
     let progress = Progress(totalUnitCount: 10)
@@ -58,7 +58,7 @@ class TestIQController: UIViewController {
         progressView.progress = 0.0
         progress.completedUnitCount = 0
         
-        ServerRqe.dataIQTests() // Instancja zwraca pulę testów wraz z odpowiedźmiami (3 tablice zapisane na tel)
+        
         
         arrayQuestion = user_data_tests.array(forKey: "questions") as? [String] ?? [String]()
         arrayAnswer = user_data_tests.array(forKey: "answers") as? [String] ?? [String]()

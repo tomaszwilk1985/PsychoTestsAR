@@ -27,8 +27,8 @@ class TestIQStoryController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let serwerAction = ServerAction()
-        serwerAction.ShowMyTests()
+        let ServerRqe = ServerAction()
+        ServerRqe.dataIQTests() // Instancja zwraca pulę testów wraz z odpowiedźmiami (3 tablice zapisane na tel)
         // Do any additional setup after loading the view.
     }
     

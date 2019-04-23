@@ -37,7 +37,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     //Additional variables
     var hitCounter: Int = 0 // total hit count
-    var objectToEnd: Int = 10
+    var objectToEnd = 10
     var isStarted: Bool = false
     var currentDisplayObject = ""
     var currentMLRecognize = ""
@@ -52,7 +52,9 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+      if(isStarted == false){
         detectOrientation()
+        }
     }
     
     func detectOrientation() {
@@ -113,6 +115,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
         let classificationRequest = VNCoreMLRequest(model: selectedModel, completionHandler: classificationCompleteHandler)
         classificationRequest.imageCropAndScaleOption = VNImageCropAndScaleOption.centerCrop // Crop from centre of images and scale to appropriate size.
         visionRequests = [classificationRequest]
+
         
     }
     
@@ -121,7 +124,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
         
@@ -132,7 +135,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        navigationController?.setNavigationBarHidden(false, animated: animated)
         // Pause the view's session
         sceneView.session.pause()
         objectToEnd = 10
@@ -211,7 +214,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
             let topPredictionName = topPrediction.components(separatedBy: ":")[0].trimmingCharacters(in: .whitespaces)
             // Only display a prediction if confidence is above 1%
             let topPredictionScore:Float? = Float(topPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
-            if (topPredictionScore != nil && topPredictionScore! > 0.80) {
+            if (topPredictionScore != nil && topPredictionScore! > 0.01) {
                 if (topPredictionName == "hand_fist") { //hand_fist fist-UB-RHand
                     symbol = "👊"
                     self.currentMLRecognize = "fist"
@@ -254,8 +257,9 @@ class ARController: UIViewController, ARSCNViewDelegate {
             self.symbolOverlay.isHidden = true
             self.imgStopWatch.isHidden = true
             self.imgScoreboard.isHidden = true
+            isStarted = false
             self.txtInfo.text = "Twój wynik to: " + lblCounter.text!
-            
+           // timer?.invalidate()
         }
         
     }

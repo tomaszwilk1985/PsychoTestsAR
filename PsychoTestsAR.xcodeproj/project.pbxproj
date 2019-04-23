@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F164D782253EFAC00F04B45 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F164D772253EFAC00F04B45 /* MainMenuController.swift */; };
-		0FD56499226DE21700A305C3 /* hand_ml.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0FD56498226DE21700A305C3 /* hand_ml.mlmodel */; };
+		0F98C953226F74EE003DA703 /* TestARStoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98C952226F74EE003DA703 /* TestARStoryController.swift */; };
+		0F98C957226FA065003DA703 /* hand_ml.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0F98C956226FA065003DA703 /* hand_ml.mlmodel */; };
 		0FD90D0722551424003BF819 /* ScoreBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D0622551424003BF819 /* ScoreBoardController.swift */; };
 		0FD90D09225514A2003BF819 /* PsychoTestSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D08225514A2003BF819 /* PsychoTestSelectorController.swift */; };
 		0FD90D0B225514E7003BF819 /* TestIQStoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD90D0A225514E7003BF819 /* TestIQStoryController.swift */; };
@@ -58,7 +59,8 @@
 
 /* Begin PBXFileReference section */
 		0F164D772253EFAC00F04B45 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
-		0FD56498226DE21700A305C3 /* hand_ml.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = hand_ml.mlmodel; sourceTree = "<group>"; };
+		0F98C952226F74EE003DA703 /* TestARStoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestARStoryController.swift; sourceTree = "<group>"; };
+		0F98C956226FA065003DA703 /* hand_ml.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = hand_ml.mlmodel; sourceTree = "<group>"; };
 		0FD90D0622551424003BF819 /* ScoreBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardController.swift; sourceTree = "<group>"; };
 		0FD90D08225514A2003BF819 /* PsychoTestSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychoTestSelectorController.swift; sourceTree = "<group>"; };
 		0FD90D0A225514E7003BF819 /* TestIQStoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIQStoryController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				0FD90D0A225514E7003BF819 /* TestIQStoryController.swift */,
+				0F98C952226F74EE003DA703 /* TestARStoryController.swift */,
 				0FD90D0C225514FA003BF819 /* TestIQController.swift */,
 				0FD90D0E2255150E003BF819 /* TestRavenStoryController.swift */,
 				0FD90D1022551524003BF819 /* TestRavenController.swift */,
@@ -197,8 +200,8 @@
 				0FE64B2022402EC300A376DF /* AppDelegate.swift */,
 				0FE64B2722402EC300A376DF /* PsychoTestsAR.xcdatamodeld */,
 				0FFA844F226B11E400E9EB4C /* Interest.swift */,
+				0F98C956226FA065003DA703 /* hand_ml.mlmodel */,
 				0FFA8451226B11E400E9EB4C /* InterestCollectionViewCell.swift */,
-				0FD56498226DE21700A305C3 /* hand_ml.mlmodel */,
 				0FFA843E226B0D9600E9EB4C /* IshiharaQuestionBank.swift */,
 				0FE40853225BC8AC00333132 /* ServerCallAndResponse.swift */,
 				0FFA8449226B0E4800E9EB4C /* CheckNetConnection.swift */,
@@ -355,7 +358,7 @@
 				0FD90D0722551424003BF819 /* ScoreBoardController.swift in Sources */,
 				0FFA8453226B11E500E9EB4C /* InterestsViewController.swift in Sources */,
 				0FFA8447226B0E2E00E9EB4C /* TestIshiharaStoryController.swift in Sources */,
-				0FD56499226DE21700A305C3 /* hand_ml.mlmodel in Sources */,
+				0F98C953226F74EE003DA703 /* TestARStoryController.swift in Sources */,
 				0FFA8452226B11E500E9EB4C /* Interest.swift in Sources */,
 				1E0D7E76226E39E20089D9C4 /* RavenQuestionBank.swift in Sources */,
 				0FD90D1122551524003BF819 /* TestRavenController.swift in Sources */,
@@ -367,6 +370,7 @@
 				0FE40854225BC8AC00333132 /* ServerCallAndResponse.swift in Sources */,
 				0FE64B2122402EC300A376DF /* AppDelegate.swift in Sources */,
 				0FFA8454226B11E500E9EB4C /* InterestCollectionViewCell.swift in Sources */,
+				0F98C957226FA065003DA703 /* hand_ml.mlmodel in Sources */,
 				1E0D7E74226E39CC0089D9C4 /* RavenQuestion.swift in Sources */,
 				0FD90D0B225514E7003BF819 /* TestIQStoryController.swift in Sources */,
 				1E0D7E78226E39FD0089D9C4 /* TestRavenBadAnswerViewController.swift in Sources */,
@@ -550,7 +554,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SX374XBACK;
+				DEVELOPMENT_TEAM = AYV8L43UCQ;
 				INFOPLIST_FILE = PsychoTestsAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -571,7 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SX374XBACK;
+				DEVELOPMENT_TEAM = AYV8L43UCQ;
 				INFOPLIST_FILE = PsychoTestsAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
