@@ -45,8 +45,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     var visionRequests = [VNRequest]()
-    
-    
+    let configuration = ARWorldTrackingConfiguration() // AR session configuration
     
     var mFirstStart = true
     
@@ -126,7 +125,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+       
         
         // Run the view's session
         sceneView.session.run(configuration, options: .resetTracking)
@@ -351,6 +350,11 @@ class ARController: UIViewController, ARSCNViewDelegate {
             self.symbolOverlay.isHidden = false
             self.imgStopWatch.isHidden = false
             self.imgScoreboard.isHidden = false
+            
+            //reset tracking if Ok button pressed
+            //without this step - object will be show where test is running not where camera show
+            sceneView.session.pause()
+            sceneView.session.run(configuration, options: .resetTracking)
             
             // --- TIMER SETUP ---
             //important step - create box on AR
