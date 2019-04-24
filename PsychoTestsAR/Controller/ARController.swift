@@ -37,7 +37,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     //Additional variables
     var hitCounter: Int = 0 // total hit count
-    var objectToEnd = 10
+    var objectToEnd = 20
     var isStarted: Bool = false
     var currentDisplayObject = ""
     var currentMLRecognize = ""
@@ -138,7 +138,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
         navigationController?.setNavigationBarHidden(false, animated: animated)
         // Pause the view's session
         sceneView.session.pause()
-        objectToEnd = 10
+        objectToEnd = 20
     }
     
     override func didReceiveMemoryWarning() {
@@ -242,7 +242,14 @@ class ARController: UIViewController, ARSCNViewDelegate {
             lblTimer.text = String(timeLeft)
             
             if timeLeft <= 0 {
-                timeLeft = 3
+                
+                if(self.boxNode.isHidden == false && currentDisplayObject == "green")
+                {
+                    hitCounter += 1
+                    lblCounter.text = String(hitCounter)
+                }
+
+                timeLeft = 2
                 self.boxNode.isHidden = false
                 //resetTracking()
                 addMyBox(x:0,y:0,z:-0.5)
@@ -258,7 +265,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
             self.imgStopWatch.isHidden = true
             self.imgScoreboard.isHidden = true
             isStarted = false
-            self.txtInfo.text = "Twój wynik to: " + lblCounter.text!
+            self.txtInfo.text = "Liczba błędów: " + lblCounter.text!
            // timer?.invalidate()
         }
         
@@ -269,7 +276,8 @@ class ARController: UIViewController, ARSCNViewDelegate {
     {
         if (self.boxNode.isHidden == false && isStarted == true)
         {
-            if ((currentMLRecognize == "open" && currentDisplayObject == "green") || (currentMLRecognize == "fist" && currentDisplayObject == "red"))
+            
+            if ((currentMLRecognize == "open" && currentDisplayObject == "red") || (currentMLRecognize == "fist" && currentDisplayObject == "red"))
             {
                 hitCounter += 1
                 lblCounter.text = String(hitCounter)
@@ -357,7 +365,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
             mFirstStart = true
             isStarted = false
             self.scrollInfo.isHidden = false
-            objectToEnd = 10
+            objectToEnd = 20
             //add score to table
             let server = ServerAction()
             server.UploadDataServer(testNumberIn: 4, sumOfPiontsIn: hitCounter, info: self.lblCounter)
