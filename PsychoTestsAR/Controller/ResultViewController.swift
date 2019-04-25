@@ -59,13 +59,13 @@ class ResultViewController: UIViewController {
         
         let score = userDataTests.integer(forKey: "scoreResult")
         
-        resultLabel.text = "Twój wynik to: \(score)/20 pkt."
+        resultLabel.text = "\(score) z 20 pkt."
         
         let nrTest = userDataTests.integer(forKey: "nrTest")
         if nrTest == 1 {
             badResultsButton.isHidden = true
             explainLabel.isHidden = true
-            resultLabel.text = "Twój wynik to: \(score)/10 pkt."
+            resultLabel.text = "\(score) z 10 pkt."
             
         }
         
