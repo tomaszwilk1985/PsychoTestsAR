@@ -1240,7 +1240,7 @@ do następnego pytania.</string>
         <scene sceneID="QLI-FT-5fx">
             <objects>
                 <viewController id="MMN-ip-KgG" customClass="ARController" customModule="PsychoTestsAR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="eYW-Ch-8SP">
+                    <view key="view" contentMode="scaleToFill" id="eYW-Ch-8SP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1256,7 +1256,7 @@ do następnego pytania.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="⏳" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="g8C-vh-yMy" colorLabel="IBBuiltInLabel-Gray" propertyAccessControl="none">
+                            <textField hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="⏳" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="g8C-vh-yMy" colorLabel="IBBuiltInLabel-Gray" propertyAccessControl="none">
                                 <rect key="frame" x="318" y="30" width="41" height="312"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" adjustable="YES"/>
@@ -1485,7 +1485,7 @@ do następnego pytania.</string>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzN-mc-F6V">
                                                     <rect key="frame" x="0.0" y="0.0" width="231" height="400"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Psychotest składa się z kilku modułów pozwalających na kompleksowe wytrenowanie sprawności psycho- ruchowej" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="22" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9f-li-kik">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Psychotest składa się z kilku modułów pozwalających na kompleksowe wytrenowanie sprawności psycho- ruchowej" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="22" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9f-li-kik">
                                                             <rect key="frame" x="30" y="116" width="171" height="182"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="182" id="PME-ig-DD4"/>
@@ -1497,9 +1497,9 @@ do następnego pytania.</string>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.47206939549999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="h9f-li-kik" secondAttribute="trailing" constant="57" id="LhQ-wA-Z6N"/>
-                                                        <constraint firstItem="h9f-li-kik" firstAttribute="leading" secondItem="vzN-mc-F6V" secondAttribute="leading" constant="58" id="d8S-1h-B9B"/>
-                                                        <constraint firstItem="h9f-li-kik" firstAttribute="centerY" secondItem="vzN-mc-F6V" secondAttribute="centerY" id="hRV-FB-LFn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="h9f-li-kik" secondAttribute="trailing" constant="30" id="LhQ-wA-Z6N"/>
+                                                        <constraint firstItem="h9f-li-kik" firstAttribute="leading" secondItem="vzN-mc-F6V" secondAttribute="leading" constant="30" id="d8S-1h-B9B"/>
+                                                        <constraint firstItem="h9f-li-kik" firstAttribute="centerY" secondItem="vzN-mc-F6V" secondAttribute="centerY" constant="7" id="hRV-FB-LFn"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -1522,16 +1522,11 @@ do następnego pytania.</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Psychotests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWP-xj-co1">
-                                <rect key="frame" x="16" y="594" width="213" height="47"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="psychotests_logo_256x256-kopia 2" translatesAutoresizingMaskIntoConstraints="NO" id="4XZ-RQ-V3j">
                                 <rect key="frame" x="133" y="8" width="189" height="101"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="psychotests_logo_256x256-kopia" translatesAutoresizingMaskIntoConstraints="NO" id="BRi-7U-OBy">
-                                <rect key="frame" x="45" y="29" width="100" height="59"/>
+                                <rect key="frame" x="25" y="29" width="100" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="vT8-JT-Ars"/>
                                 </constraints>
@@ -1539,11 +1534,10 @@ do następnego pytania.</string>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vzI-fP-Uw7" firstAttribute="top" secondItem="TWP-xj-co1" secondAttribute="bottom" constant="-551" id="1Vf-zb-24Y"/>
                             <constraint firstItem="cmO-fC-tuJ" firstAttribute="bottom" secondItem="3do-30-3zD" secondAttribute="bottom" constant="24" id="3yk-pZ-hJY"/>
                             <constraint firstItem="XVI-l4-bdS" firstAttribute="leading" secondItem="cmO-fC-tuJ" secondAttribute="leading" constant="29" id="5ge-gv-GIA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vzI-fP-Uw7" secondAttribute="trailing" constant="13" id="9o4-pB-d4e"/>
-                            <constraint firstItem="cmO-fC-tuJ" firstAttribute="trailing" secondItem="BRi-7U-OBy" secondAttribute="trailing" constant="230" id="Ej9-Tg-pHB"/>
+                            <constraint firstItem="cmO-fC-tuJ" firstAttribute="trailing" secondItem="BRi-7U-OBy" secondAttribute="trailing" constant="250" id="Ej9-Tg-pHB"/>
                             <constraint firstItem="cmO-fC-tuJ" firstAttribute="trailing" secondItem="3do-30-3zD" secondAttribute="trailing" constant="24" id="H4S-MB-tA7"/>
                             <constraint firstItem="3do-30-3zD" firstAttribute="top" secondItem="XVI-l4-bdS" secondAttribute="bottom" constant="20" id="HiM-6Q-uVw"/>
                             <constraint firstItem="cmO-fC-tuJ" firstAttribute="bottom" secondItem="3do-30-3zD" secondAttribute="bottom" constant="24" id="IZ3-pg-Vkx"/>
@@ -1551,18 +1545,14 @@ do następnego pytania.</string>
                             <constraint firstItem="cmO-fC-tuJ" firstAttribute="trailing" secondItem="3do-30-3zD" secondAttribute="trailing" constant="24" id="LHG-qs-kS3"/>
                             <constraint firstItem="cmO-fC-tuJ" firstAttribute="trailing" secondItem="XVI-l4-bdS" secondAttribute="trailing" constant="16" id="NAk-OC-ucZ"/>
                             <constraint firstItem="vzI-fP-Uw7" firstAttribute="leading" secondItem="qSO-h0-QsK" secondAttribute="leadingMargin" constant="13" id="SvS-SY-XeJ"/>
-                            <constraint firstItem="BRi-7U-OBy" firstAttribute="leading" secondItem="cmO-fC-tuJ" secondAttribute="leading" constant="45" id="UuN-7o-uDG"/>
-                            <constraint firstItem="TWP-xj-co1" firstAttribute="top" secondItem="cmO-fC-tuJ" secondAttribute="top" constant="574" id="WQL-aC-inA"/>
-                            <constraint firstItem="cmO-fC-tuJ" firstAttribute="trailing" secondItem="TWP-xj-co1" secondAttribute="trailing" constant="146" id="WQZ-kv-mBa"/>
+                            <constraint firstItem="BRi-7U-OBy" firstAttribute="leading" secondItem="cmO-fC-tuJ" secondAttribute="leading" constant="25" id="UuN-7o-uDG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vzI-fP-Uw7" secondAttribute="trailing" constant="13" id="a4X-AE-hLW"/>
                             <constraint firstItem="BRi-7U-OBy" firstAttribute="top" secondItem="cmO-fC-tuJ" secondAttribute="top" constant="9" id="ada-Vs-3Tn"/>
                             <constraint firstItem="XVI-l4-bdS" firstAttribute="top" secondItem="vzI-fP-Uw7" secondAttribute="bottom" constant="8" id="awG-Ey-Rqb"/>
                             <constraint firstItem="cmO-fC-tuJ" firstAttribute="trailing" secondItem="3do-30-3zD" secondAttribute="trailing" constant="24" id="cq4-5c-l1n"/>
                             <constraint firstItem="BRi-7U-OBy" firstAttribute="centerY" secondItem="4XZ-RQ-V3j" secondAttribute="centerY" id="eCf-0U-ubw"/>
                             <constraint firstItem="XVI-l4-bdS" firstAttribute="top" secondItem="BRi-7U-OBy" secondAttribute="bottom" constant="11" id="iS4-uG-Aqa"/>
-                            <constraint firstItem="TWP-xj-co1" firstAttribute="leading" secondItem="cmO-fC-tuJ" secondAttribute="leading" constant="16" id="keP-dZ-vwI"/>
                             <constraint firstItem="cmO-fC-tuJ" firstAttribute="trailing" secondItem="4XZ-RQ-V3j" secondAttribute="trailing" constant="53" id="qL0-sI-d1b"/>
-                            <constraint firstItem="vzI-fP-Uw7" firstAttribute="top" secondItem="TWP-xj-co1" secondAttribute="bottom" constant="-551" id="rjS-6a-ZOW"/>
                             <constraint firstItem="cmO-fC-tuJ" firstAttribute="bottom" secondItem="3do-30-3zD" secondAttribute="bottom" constant="24" id="tAN-FJ-Vxt"/>
                             <constraint firstItem="vzI-fP-Uw7" firstAttribute="leading" secondItem="qSO-h0-QsK" secondAttribute="leadingMargin" constant="13" id="uP5-7e-H62"/>
                             <constraint firstItem="4XZ-RQ-V3j" firstAttribute="leading" secondItem="cmO-fC-tuJ" secondAttribute="leading" constant="133" id="x5Z-4s-ssQ"/>
@@ -1910,7 +1900,6 @@ do następnego pytania.</string>
         <image name="title" width="402" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fq9-KH-1S7"/>
         <segue reference="Qrr-pT-Dk4"/>
         <segue reference="298-G6-06q"/>
         <segue reference="w0B-Lg-Ci7"/>
